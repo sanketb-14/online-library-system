@@ -1,0 +1,44 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom styles */
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-family: theme('fontFamily.serif');
+}
+@layer components {
+  .slider-container .slick-prev,
+  .slider-container .slick-next {
+    @apply z-10 w-10 h-10 bg-primary text-white rounded-full;
+  }
+
+  .slider-container .slick-prev {
+    @apply left-2;
+  }
+
+  .slider-container .slick-next {
+    @apply right-2;
+  }
+
+  .slider-container .slick-prev:before,
+  .slider-container .slick-next:before {
+    @apply text-2xl;
+  }
+
+  .slider-container .slick-dots li button:before {
+    @apply text-primary opacity-50;
+  }
+
+  .slider-container .slick-dots li.slick-active button:before {
+    @apply text-primary opacity-100;
+  }
+}
