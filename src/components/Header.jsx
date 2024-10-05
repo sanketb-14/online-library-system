@@ -21,7 +21,7 @@ const Header = () => {
         <div className="flex justify-between  items-center">
           <Link to="/" className="flex items-center space-x-2">
             <motion.div
-              whileHover={{ rotate: 360 }}
+              whileHover={{ rotate: 360  }}
               transition={{ duration: 0.5 }}
             >
               <FaBook className="text-2xl sm:text-3xl text-primary" />
